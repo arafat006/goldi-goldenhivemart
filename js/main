@@ -1,0 +1,179 @@
+
+        import * as React from "react"
+        import * as ReactDOM from "react-dom/client"
+        import * as Framer from "framer"
+        
+
+        const routes = {augiA20Il: {elements: {VpTzUM1sf: "hero", XRK8XCjV7: "feature-01", yZD70pZd7: "animation"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/iPKQVFh3MRJyYIG74aiz/wpF8lAtKZwsJo3fGZJHp/augiA20Il.js")), path: "/"}, zqK_45fcT: {elements: {emo7FMyXC: "hero", S2sT2xDTo: "animation"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/GeryKuTzROdsCSeIor65/sdbyx8HHLkE2zHzXsJt0/zqK_45fcT.js")), path: "/about"}, M9NNuMm8Z: {elements: {KcKyCPYmD: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/jaE8TcAL3R4QIY0ik7rp/82lNsGgRNTR8bdFzaofD/M9NNuMm8Z.js")), path: "/faq"}, JYPeC421T: {elements: {cnj3aM5JE: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/XO77XjMwe1SXHE23G2nh/ofpynOu8oIyyoE1MtOGJ/JYPeC421T.js")), path: "/contact-us"}, ATAxpqqzz: {elements: {uob6lSy1P: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/WyTQc8Izy0PtvHcOuaSd/QRq7AIBJHInsSUWYCHE3/ATAxpqqzz.js")), path: "/pricing"}, QZtcQia3o: {elements: {asifPIEzm: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/1hys59pNHYK4JvzfwEve/1APAMqEoz6zbocNw1kgq/QZtcQia3o.js")), path: "/404"}, uxSUE84nC: {elements: {EBmFOfcJb: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/YfootwZolTYFjs0jLfDx/CW7yO5P4111wVX1nTqm7/uxSUE84nC.js")), path: "/terms-conditions"}, SwY9cKTGx: {elements: {PDRL98Lnp: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/648JseoYveG4fnfBMrut/dL48WwIsM1bBhmk8ZMC7/SwY9cKTGx.js")), path: "/privacy-policy"}, TJxT8KAI6: {elements: {aikHTHd34: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/hXppnsQecngefSqeBCfY/Vbn8gTUG4G1bPZkvjBG0/TJxT8KAI6.js")), path: "/blog"}, V9AFod64r: {elements: {HZGzU5fAq: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/8dGdSpRwQENraq0ogvNP/DfCbyI4KLvayKCLgEKqU/V9AFod64r.js")), path: "/team"}, JrRWlVYt9: {collectionId: "apjtjBcFT", elements: {GNUxkngvq: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/7TY5fcRzNAz0YQL3lXYE/N6brXqlW6ddkCJyTsOQY/JrRWlVYt9.js")), path: "/team/:VVJzXjTMm"}, B9TIbKF5G: {collectionId: "T4H4qV7EZ", elements: {TSIR8YnWS: "hero"}, page: Framer.lazy(() => import("https://framerusercontent.com/modules/p0ZczfwgIbPXBVSZTlJN/VH90I5gAja9tz3YROBCk/B9TIbKF5G.js")), path: "/blog/:tj1xSAjF4"}}
+        const locales = [{code: "en", id: "default", name: "English", slug: ""}]
+        
+        
+
+        export async function getPageRoot({ routeId, pathVariables, localeId }) {
+            // We don't want the initial render to immediately have to suspend.
+            await routes[routeId].page.preload()
+
+            const content = React.createElement(
+                Framer.PageRoot,
+                {
+                    isWebsite: true,
+                    routeId,
+                    pathVariables,
+                    routes,
+                    collectionUtils: {apjtjBcFT: async () => (await import("https://framerusercontent.com/modules/rpk9kbe8QqLKChW0Zchb/Zx6gkj8g5nLFRLxBsPph/apjtjBcFT.js"))?.["utils"], T4H4qV7EZ: async () => (await import("https://framerusercontent.com/modules/4ueSGjDU16rGUxJ0ywuA/026V21JTzqsNfpq9Gyef/T4H4qV7EZ.js"))?.["utils"]},
+                    framerSiteId: "1f65fe47244edabcf1165ed95715be8af4255118dc0df4805edf77a4f418ebe5",
+                    notFoundPage: Framer.lazy(() => import("https://framerusercontent.com/modules/1hys59pNHYK4JvzfwEve/1APAMqEoz6zbocNw1kgq/QZtcQia3o.js")),
+                    isReducedMotion: undefined,
+                    localeId,
+                    locales,
+                    preserveQueryParams: undefined,
+                    
+                    
+                }
+            )
+
+            const contentWithFeaturesContext = React.createElement(
+                Framer.LibraryFeaturesProvider,
+                {
+                    children: content,
+                    value: {enableAsyncURLUpdates: true, replaceNestedLinks: true, useGranularSuspense: true, wrapUpdatesInTransitions: false}
+                }
+            )
+
+            
+            const page = React.createElement(Framer.PageEffectsProvider, {
+                children: contentWithFeaturesContext,
+                value: {routes: {}}
+            })
+
+            return page
+        }
+
+        const isBrowser = typeof document !== "undefined"
+        if (isBrowser) {
+            window.__framer_importFromPackage = (packageAndFilename, exportIdentifier) => () => {
+                return React.createElement(Framer.ErrorPlaceholder, { error: 'Package component not supported: "' + exportIdentifier + '" in "' + packageAndFilename + '"' })
+            }
+
+            // A lot of libraries assume process.env.NODE_ENV is present in runtime/buildtime, so we are polyfilling it
+            window.process = {
+                ...window.process,
+                env: {
+                    ...(window.process ? window.process.env: undefined),
+                    NODE_ENV: "production"
+                }
+            }
+
+            window.__framer_events = window.__framer_events || []
+
+            // Fallback support for stack gaps
+            Framer.installFlexboxGapWorkaroundIfNeeded()
+
+            const container = document.getElementById("main")
+            // We know that #main is parsed before this script, so we don't need to wait for DOMContentLoaded or similar events.
+            if ("framerHydrateV2" in container.dataset) main(true, container)
+            else main(false, container)
+        }
+
+        function track() {
+            if (!isBrowser) return
+            window.__framer_events.push(arguments)
+        }
+
+        async function main(shouldHydrate, container) {
+            try {
+                let routeId, localeId, pathVariables, breakpoints
+                if (shouldHydrate) {
+                    const routeData = JSON.parse(container.dataset.framerHydrateV2)
+                    routeId = routeData.routeId
+                    localeId = routeData.localeId
+                    pathVariables = routeData.pathVariables
+                    breakpoints = routeData.breakpoints
+                } else {
+                    const routeData = Framer.inferInitialRouteFromPath(routes, decodeURIComponent(location.pathname), true, locales)
+                    routeId = routeData.routeId
+                    localeId = routeData.localeId
+                    pathVariables = routeData.pathVariables
+                }
+
+                const page = await getPageRoot({ routeId, localeId, pathVariables })
+
+                function handleRecoverableError(error, errorInfo) {
+                    if (error.caught) return // we already logged it
+                    const componentStack = errorInfo?.componentStack
+                    console.warn("Recoverable error during hydration. Please check any custom code or code overrides to fix server/client mismatches:\n", error, componentStack)
+                    // we only want to collect 1%, because this can be quite noisy (floods the data pipeline)
+                    if (Math.random() > 0.01) return
+                    track("published_site_load_recoverable_error", {
+                        message: String(error),
+                        componentStack, // componentStack is more useful
+                        stack: componentStack ? undefined : error instanceof Error && typeof error.stack === "string" ? error.stack : null,
+                    })
+                }
+
+                if (shouldHydrate) {
+                    
+
+                    Framer.withPerformanceMarks("framer-rewrite-breakpoints", () => {
+                        Framer.removeHiddenBreakpointLayersV2(breakpoints)
+                        window.__framer_onRewriteBreakpoints?.(breakpoints)
+                    })
+
+                    
+
+                    const startTransition = React.startTransition
+                    startTransition(() => {
+                        Framer.markHydrationStart()
+                        Framer.setInitialHydrationState()
+                        if (true) Framer.turnOffReactEventHandling()
+                        ReactDOM.hydrateRoot(container, page, { onRecoverableError: handleRecoverableError })
+                    })
+                } else {
+                    
+                    ReactDOM.createRoot(container, { onRecoverableError: handleRecoverableError }).render(page)
+                }
+            } catch (error) {
+                track("published_site_load_error", {
+                    message: String(error),
+                    stack: error instanceof Error && typeof error.stack === "string" ? error.stack : null
+                })
+                throw error
+            }
+        }
+
+        
+
+        
+        ;(function () {
+            if (!isBrowser) return
+
+            React.startTransition(() => {
+                ReactDOM.createRoot(document.getElementById("__framer-badge-container")).render(React.createElement(React.Suspense, {},
+                    React.createElement(Framer.withStyleAppearEffect(Framer.Container), {
+                        className: "__framer-badge",
+                        __framer__threshold: 0.5,
+                        __framer__animateOnce: true,
+                        __framer__opacity: 0,
+                        __framer__targetOpacity: 1,
+                        __framer__rotate: 0,
+                        __framer__x: 0,
+                        __framer__y: 10,
+                        __framer__scale: 1,
+                        __framer__transition: {
+                            "type": "spring",
+                            "ease": [0.44, 0, 0.56, 1],
+                            "duration": 0.3,
+                            "delay": 1,
+                            "stiffness": 350,
+                            "damping": 40,
+                            "mass": 1.5
+                        },
+                        __framer__rotateX: 0,
+                        __framer__rotateY: 0,
+                        __framer__perspective: 1200,
+                    }, React.createElement(React.lazy(() => import("__framer-badge")))
+                    )
+                ))
+            })
+        })()
+    
